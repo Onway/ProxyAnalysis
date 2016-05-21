@@ -1,0 +1,57 @@
+#!/bin/sh
+
+### BEGIN INIT INFO
+# Provides:			 ProxyAnalyze
+# Required-Start:    $local_fs $syslog
+# Required-Stop:     $local_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: ProxyAnalyze init script
+# Description:       This script used to start/stop ProxyAnalyze
+### END INIT INFO
+
+NAME=ProxyAnalyze
+DESC="${NAME} server"
+PIDFILE="/var/tmp/${NAME}.pid"
+EXEC=/home/onway/Programs/Projects/ProxyAnalyze/RecordServer.py
+
+start() {
+	echo "Starting ${DESC} ..."
+    start-stop-daemon --background \
+                      --make-pidfile \
+                      --pidfile ${PIDFILE} \
+                      --chuid nobody:nogroup \
+                      --startas ${EXEC} \
+                      --start
+}
+
+stop() {
+	echo "Stopping ${DESC} ..."
+    start-stop-daemon --pidfile ${PIDFILE} \
+                      --user nobody \
+                      --stop
+    [ -f ${PIDFILE} ] && rm ${PIDFILE}
+}
+
+case "$1" in
+  start)
+	start
+	;;
+
+  stop)
+	stop
+	;;
+
+  restart|force-reload)
+	stop
+	start
+	;;
+
+  *)
+	N=/etc/init.d/${NAME}
+	echo "Usage: service ${NAME} {start|stop|restart}" >&2
+	exit 1
+	;;
+esac
+
+exit 0
