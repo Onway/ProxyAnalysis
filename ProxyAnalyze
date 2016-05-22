@@ -13,7 +13,7 @@
 NAME=ProxyAnalyze
 DESC="${NAME} server"
 PIDFILE="/var/tmp/${NAME}.pid"
-EXEC=/home/onway/Programs/Projects/ProxyAnalyze/RecordServer.py
+EXEC=/opt/ProxyAnalyze/RecordServer.py
 
 start() {
 	echo "Starting ${DESC} ..."
