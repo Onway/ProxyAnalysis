@@ -1,19 +1,19 @@
 #!/bin/sh
 
 ### BEGIN INIT INFO
-# Provides:			 ProxyAnalyze
+# Provides:			 ProxyAnalysis
 # Required-Start:    $local_fs
 # Required-Stop:     $local_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: ProxyAnalyze init script
-# Description:       This script used to start/stop ProxyAnalyze
+# Short-Description: ProxyAnalysis init script
+# Description:       This script used to start/stop ProxyAnalysis
 ### END INIT INFO
 
-NAME=ProxyAnalyze
+NAME=ProxyAnalysis
 DESC="${NAME} server"
 PIDFILE="/var/tmp/${NAME}.pid"
-EXEC=/opt/ProxyAnalyze/RecordServer.py
+EXEC=/opt/ProxyAnalysis/RecordServer.py
 
 start() {
 	echo "Starting ${DESC} ..."

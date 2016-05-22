@@ -7,7 +7,7 @@ import os
 
 HOST = "127.0.0.1"
 PORT = 8390
-DBFILE = "/opt/ProxyAnalyze/var/analyze.db"
+DBFILE = "/opt/ProxyAnalysis/var/analyze.db"
 
 SFMT = '>h'
 IFMT = '>I'

@@ -1,11 +1,11 @@
 #!/bin/bash
 
-echo "Installing ProxyAnalyze..."
+echo "Installing ProxyAnalysis..."
 
-insdir=/opt/ProxyAnalyze
+insdir=/opt/ProxyAnalysis
 [ ! -d ${insdir} ] && mkdir ${insdir}
 cp -u * ${insdir}
-cp -u "${insdir}/ProxyAnalyze" /etc/init.d
+cp -u "${insdir}/ProxyAnalysis" /etc/init.d
 
 vardir="${insdir}/var"
 if [ ! -d ${vardir} ] ; then

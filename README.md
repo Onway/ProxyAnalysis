@@ -1,19 +1,19 @@
-# ProxyAnalyze
+# ProxyAnalysis
 Running an udp server to receive connection information from ThisSocks and store into SQLite.  
 Then there should be some tools for analysis....
 
 ## Install
-    git clone https://github.com/Onway/ProxyAnalyze.git
-    cd ProxyAnalyze
+    git clone https://github.com/Onway/ProxyAnalysis.git
+    cd ProxyAnalysis
     sudo ./install.sh
     
 ## Uninstall
-    sudo /opt/ProxyAnalyze/uninstall.sh
+    sudo /opt/ProxyAnalysis/uninstall.sh
     
 ## Start
-    sudo service ProxyAnalyze start
+    sudo service ProxyAnalysis start
     
 ## Stop
-    sudo service ProxyAnalyze stop
+    sudo service ProxyAnalysis stop
     
 
